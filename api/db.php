@@ -1,6 +1,7 @@
 <?php
+include 'config.php';
 
-$connect = mysqli_connect("localhost", "root", "", "hng.users");
+$connect = mysqli_connect(DB_HOST, DB_USER, DB_PW, DB_NAME, DB_PORT);
 
 if (!$connect) {
     echo json_encode(['status'=>'error', 'message' => 'Not Connected']);
